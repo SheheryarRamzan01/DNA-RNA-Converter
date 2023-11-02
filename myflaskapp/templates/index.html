@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DNA/RNA to Protein Translator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">DNA/RNA to Protein Translator</h1>
+        <div class="centered-content">
+            <form method="POST">
+                <label for="sequence">Enter a DNA or RNA sequence:</label>
+                <input type="text" name="sequence" id="sequence" required>
+                <button class="translate-button" type="submit">Translate</button>
+            </form>
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
